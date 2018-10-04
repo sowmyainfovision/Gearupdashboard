@@ -1,0 +1,97 @@
+.align {
+  text-align:right;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width:80%;
+}
+
+
+.wrapper {
+    padding: 40px 40px 40px 40px;
+    width:100%;
+}
+
+@media (min-width: 768px) {
+.col-sm-12 {
+      width: 100%;
+        }
+}
+@media (min-width: 992px) {
+  .col-md-6 {
+      width: 100%;
+      
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-6 {
+      width: 100%;
+      
+  }
+}
+.info{
+  width:50%;
+  float:right;
+}
+
+.icon{
+  width:50%;
+  float:left;
+}
+.dashboardstatslargetext {
+  float:right;
+  font-family: Samsung-Sharp-Sans, bold;
+  font-size: 25px;
+ }
+
+.dashboardcardlargetext {
+  font-size: 20px;
+  font-family: Samsung-Sharp-Sans, bold;
+  padding: top 0px;
+ 
+ 
+}
+
+.dashboardcardsmalltext {
+ font-size: 15px;
+ font-family: Samsung-Sharp-Sans, bold;
+ padding-top:30px;
+    
+}
+
+.img{
+  height:50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+}
+
+.dashboardcircle {
+  background:gray;
+  height: 60px;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  width: 60px;
+  margin-bottom: 5px;
+  border-radius: 75px;
+}
+
