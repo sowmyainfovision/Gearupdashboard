@@ -10,7 +10,7 @@ class User extends Component {
             <div className="icon">
           <div className="dashboardcircle">
           <img className="img" src={users} alt="userimage"></img>
-          </div>
+          </div><br></br>
           <b>Users</b>
           </div>
           <div className="info">

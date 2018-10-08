@@ -11,7 +11,7 @@ class Tasks extends Component {
              <div className="icon">
         <div className="dashboardcircle">
         <img className="img" src={task} alt="taskimage"></img>
-        </div>
+        </div><br></br>
         <b>Tasks</b>
         </div>
         <div className="info">

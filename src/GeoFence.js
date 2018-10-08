@@ -11,7 +11,7 @@ class GeoFence extends Component {
             <div className="icon">
         <div className="dashboardcircle">
         <img className="img" src={geoimage} alt="geoimage"></img>
-        </div>
+        </div><br></br>
         <b>GeoFence</b>
         </div>
         <div className="info">

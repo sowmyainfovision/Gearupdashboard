@@ -12,7 +12,7 @@ import { CSSTransitionGroup } from 'react-transition-group'
 
 const styles = {
   card: {
-           height:'100px',
+           height:'150px',
            display:'flex',
            padding: 20,
            flexDirection:'column',

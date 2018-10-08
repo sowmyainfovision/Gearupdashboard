@@ -11,7 +11,7 @@ class Groups extends Component {
              <div className="icon">
         <div className="dashboardcircle">
         <img className="img" src={groupsimage} alt="groupsimage"></img>
-        </div>
+        </div><br></br>
         <span><b>Groups</b></span>
         </div>
         <div className="gap"></div>

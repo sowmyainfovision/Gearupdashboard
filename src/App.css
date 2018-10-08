@@ -1,9 +1,9 @@
 .App {
 
  
-    margin-top: 100px;
+    margin-top: 200px;
    margin-bottom: 100px;
-   margin-right: 5 0px;
+   margin-right: 50px;
    margin-left: 50px;
    
 
@@ -57,15 +57,18 @@
 .icon{
   width:50%;
   float:left;
+  font-size: 20px;
+ font-family: Samsung-Sharp-Sans, bold;
+  
 }
 .dashboardstatslargetext {
   float:right;
   font-family: Samsung-Sharp-Sans, bold;
-  font-size: 25px;
+  font-size: 30px;
  }
 
 .dashboardcardlargetext {
-  font-size: 20px;
+  font-size: 25px;
   font-family: Samsung-Sharp-Sans, bold;
   padding: top 0px;
  
@@ -73,7 +76,7 @@
 }
 
 .dashboardcardsmalltext {
- font-size: 15px;
+ font-size: 20px;
  font-family: Samsung-Sharp-Sans, bold;
  padding-top:30px;
     
