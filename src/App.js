@@ -1,94 +1,120 @@
-import React                   , { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import './App.css';
 import Users from './Users.js';
 import Tasks from './Tasks.js';
 import GeoFence from './GeoFence.js';
 import Groups from './Groups.js';
-import Paper from '@material-ui/core/Paper';
-import { pink400, blue500, fullWhite } from 'material-ui/styles/colors';
-import Grid from '@material-ui/core/Grid';
-
+import { CSSTransitionGroup } from 'react-transition-group'
 
 const styles = {
-  usercomponent:{
+  card: {
            height:'100px',
            display:'flex',
            padding: 20,
            flexDirection:'column',
-           width:'200px',
-           color: fullWhite,
-           backgroundColor:'#E040FB',
-                 },
+           width:'400px',
+           color: 'black',
+           backgroundColor:'white',
+           
+  },
+ };
 
-  groupscomponent:{
-            height:'100px',
-            display:'flex',
-            padding: 20,
-            flexDirection:'column',
-            width:'200px',
-            color: fullWhite,
-            backgroundColor:blue500,
-                  },
+function SimpleCard(props) {
+  const { classes } = props;
+  const bull = <span className={classes.bullet}>•</span>;
 
-  Taskcomponent:{
-              height:'100px',
-              display:'flex',
-              padding: 20,
-              flexDirection:'column',
-              width:'200px',
-              color: fullWhite,
-              backgroundColor:'#66BB6A',
-                 },
-
-  Geocomponent:{
-                  height:'100px',
-                  display:'flex',
-                  padding: 20,
-                  flexDirection:'column',
-                  width:'200px',
-                  color: fullWhite,
-                  backgroundColor:pink400,
-                   },
-  };
-
-
-class App extends Component {
-  render() {
-    return (
-     <div className="wrapper">
-      <div className="row">
-      <div className="col-sm-12 col-md-6 col-lg-6">
+  return (
+      <div className="App">
+        <div className="icon">
       <div className="icon">
-      <div className="icon">
-                   <Paper zDepth={5} style={styles.usercomponent}>
-              <Users />
-          </Paper>
-          </div>
-          <div className="info">        
-                  <Paper zDepth={5} style={styles.groupscomponent}>
-              <Groups />
-          </Paper>
-          </div>
-          </div>
-          <div  className="info">
-          <div className="icon">
-                              <Paper zDepth={5} style={styles.Taskcomponent}>
-              <Tasks />
-          </Paper>
-               </div> 
-               <div className="icon">     
-                      <Paper zDepth={5} style={styles.Geocomponent}>
-      <GeoFence />
-      </Paper>
-      </div>
-      </div>
-      </div>
-      </div>
-            </div>
-    );
-  }
+    <CSSTransitionGroup
+  transitionName="cardAnimation"
+  transitionAppear={true}
+  transitionAppearTimeout={1000}
+  transitionEnter={false}
+  transitionLeave={false}
+>   
+{
+    <Card className={classes.card}>
+    <CardContent>
+      <Users />
+      </CardContent>
+    </Card>
+
+}
+    </CSSTransitionGroup>
+    </div>
+    <div className="info">
+    <CSSTransitionGroup
+  transitionName="cardAnimation"
+  transitionAppear={true}
+  transitionAppearTimeout={1000}
+  transitionEnter={false}
+  transitionLeave={false}
+>   
+{
+
+<Card className={classes.card}>
+    <CardContent>
+      <Tasks />
+      </CardContent>
+    </Card>
+
 }
 
-export default App;
+</CSSTransitionGroup>
+</div>
+</div>
+<div className="info">
+      <div className="icon">
+<CSSTransitionGroup
+  transitionName="cardAnimation"
+  transitionAppear={true}
+  transitionAppearTimeout={1000}
+  transitionEnter={false}
+  transitionLeave={false}
+>   
+{
+    
+<Card className={classes.card}>
+   <CardContent>
+      <Groups />
+      </CardContent>
+    </Card>
+  }
 
+</CSSTransitionGroup>
+</div>
+
+<div className="info">
+<CSSTransitionGroup
+  transitionName="cardAnimation"
+  transitionAppear={true}
+  transitionAppearTimeout={1000}
+  transitionEnter={false}
+  transitionLeave={false}
+>   
+{
+   <Card className={classes.card}>
+    <CardContent>
+      <GeoFence />
+      </CardContent>
+    </Card>
+    }
+
+    </CSSTransitionGroup>
+    </div>
+    </div>
+</div>
+  );
+}
+
+SimpleCard.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(SimpleCard);

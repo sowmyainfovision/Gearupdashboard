@@ -1,10 +1,15 @@
-.align {
-  text-align:right;
+.App {
+
+ 
+    margin-top: 100px;
+   margin-bottom: 100px;
+   margin-right: 5 0px;
+   margin-left: 50px;
+   
+
 }
 
-.App-link {
-  color: #61dafb;
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -24,10 +29,7 @@
 }
 
 
-.wrapper {
-    padding: 40px 40px 40px 40px;
-    width:100%;
-}
+
 
 @media (min-width: 768px) {
 .col-sm-12 {
@@ -46,6 +48,7 @@
       
   }
 }
+
 .info{
   width:50%;
   float:right;
@@ -82,6 +85,8 @@
   padding-right: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
+  animation: App-logo-spin infinite 20s linear;
+
   
 }
 
@@ -95,3 +100,22 @@
   border-radius: 75px;
 }
 
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cardAnimation-appear {
+  opacity: 0.01;
+  transform: rotate(50deg);
+}
+
+.cardAnimation-appear.cardAnimation-appear-active {
+  opacity: 1;
+  transition: all 1s ease-in;
+}
